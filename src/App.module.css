@@ -48,14 +48,16 @@
   .topRow {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .profileSection {
     grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 1200px) {
-  .topRow, .bottomRow {
+
+  .topRow,
+  .bottomRow {
     grid-template-columns: 1fr;
   }
 }
@@ -73,7 +75,7 @@
     margin-bottom: 70px;
     padding: 16px;
   }
-  
+
   .pageTitle {
     font-size: 1.5rem;
   }

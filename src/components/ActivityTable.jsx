@@ -16,7 +16,7 @@ const ActivityTable = () => {
         <h2>Recent Activity</h2>
         <button className={styles.viewAllBtn}>View All</button>
       </div>
-      
+
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <thead>
