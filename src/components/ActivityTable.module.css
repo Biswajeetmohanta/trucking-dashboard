@@ -1,0 +1,132 @@
+.tableCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.viewAllBtn {
+  background: transparent;
+  color: var(--accent-primary);
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.viewAllBtn:hover {
+  text-decoration: underline;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.tableRow:hover td {
+  background-color: var(--bg-card-hover);
+}
+
+.tableRow:last-child td {
+  border-bottom: none;
+}
+
+.tripId {
+  font-family: monospace;
+  color: var(--text-secondary) !important;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.routeIcon {
+  color: var(--accent-primary);
+}
+
+.arrow {
+  color: var(--text-muted);
+  margin: 0 4px;
+}
+
+.date {
+  color: var(--text-secondary) !important;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badgeSuccess {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--accent-success);
+}
+
+.badgeWarning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--accent-warning);
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+.miles {
+  font-weight: 500;
+}
+
+.points {
+  font-weight: 600;
+  color: var(--accent-success) !important;
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 12px 8px;
+  }
+  
+  .date, .miles {
+    display: none;
+  }
+}

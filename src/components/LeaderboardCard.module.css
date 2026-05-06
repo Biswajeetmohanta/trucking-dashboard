@@ -1,0 +1,97 @@
+.leaderboardCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titleContainer h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: background-color 0.2s;
+}
+
+.listItem:hover {
+  background-color: var(--bg-card-hover);
+}
+
+.highlighted {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), transparent);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.highlighted:hover {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.15), rgba(255, 255, 255, 0.02));
+}
+
+.rankContainer {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  gap: 4px;
+}
+
+.rank {
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.trendDown {
+  transform: rotate(180deg);
+}
+
+.driverInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.highlighted .name {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.points {
+  font-weight: 700;
+  font-size: 0.95rem;
+}

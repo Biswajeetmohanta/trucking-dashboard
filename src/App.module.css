@@ -1,0 +1,80 @@
+.appContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  padding: 32px;
+  background-color: var(--bg-main);
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.pageSubtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.dashboardGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 350px 1fr 350px;
+  gap: 24px;
+}
+
+.bottomRow {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 24px;
+}
+
+@media (max-width: 1400px) {
+  .topRow {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .profileSection {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .topRow, .bottomRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-left: 80px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    margin-bottom: 70px;
+    padding: 16px;
+  }
+  
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+}
