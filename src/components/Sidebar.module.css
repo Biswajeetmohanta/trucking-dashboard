@@ -47,6 +47,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  height: 100%;
 }
 
 .navItem {
@@ -72,10 +73,11 @@
   border-right: 3px solid var(--accent-primary);
 }
 
-.bottomNav {
+.settingsItem {
   margin-top: auto;
   padding-top: 24px;
   border-top: 1px solid var(--border-color);
+  border-radius: 0;
 }
 
 @media (max-width: 1024px) {
@@ -112,7 +114,7 @@
     align-items: center;
   }
 
-  .logoContainer, .bottomNav {
+  .logoContainer {
     display: none;
   }
 
@@ -135,5 +137,11 @@
   .navItem.active {
     border-right: none;
     border-bottom: 3px solid var(--accent-primary);
+  }
+
+  .settingsItem {
+    margin-top: 0;
+    padding-top: 8px;
+    border-top: none;
   }
 }

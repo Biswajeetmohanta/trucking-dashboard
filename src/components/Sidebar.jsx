@@ -2,7 +2,7 @@ import React from 'react';
 import { LayoutDashboard, Gift, Map, Award, Settings, LogOut, Truck } from 'lucide-react';
 import styles from './Sidebar.module.css';
 
-const Sidebar = () => {
+const Sidebar = ({ activeTab, setActiveTab }) => {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.logoContainer}>
@@ -14,28 +14,35 @@ const Sidebar = () => {
 
       <nav className={styles.nav}>
         <ul className={styles.navList}>
-          <li className={`${styles.navItem} ${styles.active}`}>
+          <li 
+            className={`${styles.navItem} ${activeTab === 'dashboard' ? styles.active : ''}`}
+            onClick={() => setActiveTab('dashboard')}
+          >
             <LayoutDashboard size={20} />
             <span>Dashboard</span>
           </li>
-          <li className={styles.navItem}>
+          <li 
+            className={`${styles.navItem} ${activeTab === 'trips' ? styles.active : ''}`}
+            onClick={() => setActiveTab('trips')}
+          >
             <Map size={20} />
             <span>My Trips</span>
           </li>
-          <li className={styles.navItem}>
+          <li 
+            className={`${styles.navItem} ${activeTab === 'rewards' ? styles.active : ''}`}
+            onClick={() => setActiveTab('rewards')}
+          >
             <Gift size={20} />
             <span>Rewards</span>
           </li>
-          <li className={styles.navItem}>
+          <li 
+            className={`${styles.navItem} ${activeTab === 'leaderboard' ? styles.active : ''}`}
+            onClick={() => setActiveTab('leaderboard')}
+          >
             <Award size={20} />
             <span>Leaderboard</span>
           </li>
-        </ul>
-      </nav>
-
-      <div className={styles.bottomNav}>
-        <ul className={styles.navList}>
-          <li className={styles.navItem}>
+          <li className={`${styles.navItem} ${styles.settingsItem}`}>
             <Settings size={20} />
             <span>Settings</span>
           </li>
@@ -44,7 +51,7 @@ const Sidebar = () => {
             <span>Logout</span>
           </li>
         </ul>
-      </div>
+      </nav>
     </aside>
   );
 };
