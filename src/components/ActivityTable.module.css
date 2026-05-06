@@ -122,14 +122,63 @@
 }
 
 @media (max-width: 768px) {
-
-  .table th,
-  .table td {
-    padding: 12px 8px;
+  .table {
+    display: table;
+    width: 100%;
   }
 
-  .date,
-  .miles {
+  .table thead {
+    display: table-header-group;
+  }
+
+  .table tr {
+    display: table-row;
+  }
+
+  .table th, .table td {
+    display: table-cell;
+    padding: 6px 2px;
+    font-size: 0.62rem;
+    white-space: normal;
+    word-break: break-word;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .route {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    min-width: 70px;
+  }
+
+  .routeIcon {
     display: none;
+  }
+
+  .arrow {
+    display: block;
+    margin: -2px 0;
+    transform: rotate(90deg);
+    width: 10px;
+  }
+
+  .badge {
+    padding: 2px 4px;
+    font-size: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .tripId, .date, .miles {
+    display: table-cell !important;
+  }
+
+  .tripId {
+    font-size: 0.55rem;
+    min-width: 45px;
+  }
+
+  .points {
+    white-space: nowrap;
   }
 }

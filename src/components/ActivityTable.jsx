@@ -21,33 +21,33 @@ const ActivityTable = () => {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th>Trip ID</th>
+              <th className={styles.tripId}>Trip ID</th>
               <th>Route</th>
-              <th>Date</th>
+              <th className={styles.date}>Date</th>
               <th>Status</th>
-              <th className={styles.rightAlign}>Miles</th>
+              <th className={`${styles.rightAlign} ${styles.miles}`}>Miles</th>
               <th className={styles.rightAlign}>Points</th>
             </tr>
           </thead>
           <tbody>
             {activities.map((activity) => (
               <tr key={activity.id} className={styles.tableRow}>
-                <td className={styles.tripId}>{activity.id}</td>
-                <td>
+                <td data-label="Trip ID" className={styles.tripId}>{activity.id}</td>
+                <td data-label="Route">
                   <div className={styles.route}>
                     <MapPin size={14} className={styles.routeIcon} />
                     <span>{activity.origin} <span className={styles.arrow}>→</span> {activity.dest}</span>
                   </div>
                 </td>
-                <td className={styles.date}>{activity.date}</td>
-                <td>
+                <td data-label="Date" className={styles.date}>{activity.date}</td>
+                <td data-label="Status">
                   <span className={`${styles.badge} ${activity.status === 'Completed' ? styles.badgeSuccess : styles.badgeWarning}`}>
                     {activity.status === 'Completed' ? <CheckCircle2 size={12} /> : <Clock size={12} />}
                     {activity.status}
                   </span>
                 </td>
-                <td className={`${styles.rightAlign} ${styles.miles}`}>{activity.miles}</td>
-                <td className={`${styles.rightAlign} ${styles.points}`}>+{activity.points}</td>
+                <td data-label="Miles" className={`${styles.rightAlign} ${styles.miles}`}>{activity.miles}</td>
+                <td data-label="Points" className={`${styles.rightAlign} ${styles.points}`}>+{activity.points}</td>
               </tr>
             ))}
           </tbody>
